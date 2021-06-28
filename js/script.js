@@ -6,7 +6,7 @@ const app = new Vue(
             contacts: [
                 {
                 name: 'Michele',
-                avatar: '_1',
+                avatar: 'img/avatar_1.jpg',
                 visible: true,
                 messages: [
                 {
@@ -28,7 +28,7 @@ const app = new Vue(
                 },
                 {
                 name: 'Fabio',
-                avatar: '_2',
+                avatar: 'img/avatar_2.jpg',
                 visible: true,
                 messages: [
                 {
@@ -46,14 +46,16 @@ const app = new Vue(
                 text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                 status: 'sent'
                 },
+                ],
+                },
                 {
                     name: 'Samuele',
-                    avatar: '_3',
+                    avatar: 'img/avatar_3.jpg',
                     visible: true
                 },
                 {
                     name: 'Luisa',
-                    avatar: '_4',
+                    avatar: 'img/avatar_4.jpg',
                     visible: true
                 }
             ]
