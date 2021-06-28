@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#sfondo-verde{
+    height: 100px;
+    background-color: #009688;
+}
+
+#sfondo-grigio{
+    height: calc(100vh - 100px);
+    background-color: #DADBD4;
+}
+
+#app{
+    width: 80%;
+    height: 650px;
+    margin: auto;
+    background-color: blue;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    right: 50px;
+}
+
