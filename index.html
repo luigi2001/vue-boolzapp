@@ -44,9 +44,11 @@
                         <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
                 </div>
-                <div id="contatti" v-for="items in contacts">
-                    <img :src="items.avatar" alt="avatar">
-                    <h3>{{items.name}}</h3>
+                <div class="container">
+                    <div id="contatti" v-for="items in contacts">
+                        <img :src="items.avatar" alt="avatar">
+                        <h3>{{items.name}}</h3>
+                    </div>
                 </div>
             </main>
         </div>

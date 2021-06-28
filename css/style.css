@@ -116,6 +116,11 @@ main #container-cerca #cerca i{
     color: gray;
 }
 
+.container{
+    height: calc(100vh - 290px);
+    overflow-y: scroll;
+}
+
 #contatti{
     background-color: white;
     border-bottom: 1px solid lightgray;
@@ -124,6 +129,10 @@ main #container-cerca #cerca i{
 #contatti h3{
     margin-left: 10px;
 }
+
+
+
+
 
 
 
