@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
 #sfondo-verde{
     height: 100px;
     background-color: #009688;
@@ -16,12 +20,125 @@
 
 #app{
     width: 80%;
-    height: 650px;
+    height: calc(100vh - 100px);
     margin: auto;
-    background-color: blue;
     position: absolute;
     top: 50px;
     left: 50px;
     right: 50px;
+    display: flex;
 }
+
+h3{
+    font-size: 15px;
+}
+
+#col-sinistra{
+    min-width: 450px;
+    height: 100%;
+    background-color: white;
+}
+
+#col-destra{
+    width: 70%;
+    height: 100%;
+    background-color: salmon;
+}
+
+#col-sinistra header,#contatti{
+    width: 100%;
+    min-height: 70px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+img{
+    width: 50px;
+    border-radius: 50%;
+}
+
+.icons{
+    width: 60%;
+}
+
+.icons i{
+    float: right;
+    margin: 10px;
+    color: #B1B1B1;
+}
+
+#notifiche{
+    min-height: 70px;
+    background-color: #8EDAFC;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#notifiche #icon i{
+    font-size: 30px;
+    background-color: white;
+    color: #8EDAFC;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#notifiche #testo{
+    margin-left: 20px;
+}
+
+#notifiche #testo p{
+    text-decoration: underline;
+    color: gray;
+}
+
+#container-cerca{
+    height: 50px;
+    background-color: #EAEAEA;
+    padding: 10px;
+}
+
+#cerca{
+    background-color: white;
+}
+
+main #container-cerca #cerca input{
+    width: 70%;
+    height: 30px;
+    border: none;
+}
+
+main #container-cerca #cerca i{
+    font-size: 20px;
+    padding: 5px 10px;
+    color: gray;
+}
+
+#contatti{
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+}
+
+#contatti h3{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

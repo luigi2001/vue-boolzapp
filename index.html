@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <title>boolzapp</title>
 </head>
@@ -15,7 +18,42 @@
     <div id="sfondo-grigio"></div>
 
     <div id="app">
-        
+        <div id="col-sinistra">
+            <header>
+                <img src="img/avatar_io.jpg" alt="avatar_io">
+                <h3>Nome Utente</h3>
+                <div class="icons">
+                  <i class="fas fa-ellipsis-v"></i>
+                  <i class="fas fa-comment-alt"></i>
+                  <i class="fas fa-circle-notch"></i>
+                </div>
+            </header>
+            <div id="notifiche">
+                <div id="icon">
+                    <i class="far fa-bell-slash"></i>
+                </div>
+                <div id="testo">
+                    <h3>Ricevi notifiche di nuovi messaggi</h3>
+                    <p>Attiva notifiche desktop</p>
+                </div>
+            </div>
+            <main>
+                <div id="container-cerca">
+                    <div id="cerca">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </div>
+                </div>
+                <div id="contatti" v-for="items in contacts">
+                    <img :src="{{items.avatar}}" alt="avatar">
+                    <h3>{{items.name}}</h3>
+                </div>
+            </main>
+        </div>
+        <div id="col-destra">
+            <header></header>
+            <main></main>
+        </div>
     </div>
     
     <script src="js/script.js"></script>
