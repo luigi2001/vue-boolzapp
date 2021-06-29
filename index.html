@@ -66,20 +66,14 @@
                 </div>
             </header>
             <main>
-                <div class="container">
-                    <div class="box" id="verde" v-for="message in contacts[indice].messages">
-                        <div >
-                            <p>{{message.text}}</p>
-                            <p class="date">{{message.date}}</p>
-                        </div>
+                <div class="container" v-for="message in contacts[indice].messages">
+                    <div class="box" v-if="message.status == 'sent' " id="verde">
+                        <p>{{message.text}}</p>
+                        <p class="date">{{message.date}}</p>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="box" id="bianco" v-for="message in contacts[indice].messages">
-                        <div >
-                            <p>ciao</p>
-                            <p class="date">ciao</p>
-                        </div>
+                    <div class="box" v-if="message.status == 'received' " id="bianco">
+                        <p>{{message.text}}</p>
+                        <p class="date">{{message.date}}</p>
                     </div>
                 </div>
             </main>
