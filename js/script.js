@@ -58,7 +58,13 @@ const app = new Vue(
                     avatar: 'img/avatar_4.jpg',
                     visible: true
                 }
-            ]
+            ],
+            indice : 0
+        },
+        methods: {
+            selezionaUtente(indice){
+                this.indice = indice;
+            },
         }
 
     }

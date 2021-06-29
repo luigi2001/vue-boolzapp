@@ -115,14 +115,19 @@ main #container-cerca #cerca i{
     color: gray;
 }
 
-.container{
+#col-sinistra .container{
     height: calc(100vh - 290px);
     overflow-y: scroll;
 }
 
 #contatti{
+    cursor: pointer;
     background-color: white;
     border-bottom: 1px solid lightgray;
+}
+
+#contatti:hover{
+    background-color: lightgray;
 }
 
 #col-destra header{
@@ -159,6 +164,7 @@ main #container-cerca #cerca i{
     background-color: #F3EEEA;
     line-height: 60px;
     padding: 10px;
+    text-align: center;
 }
 
 .messaggio i{
@@ -168,12 +174,46 @@ main #container-cerca #cerca i{
 }
 
 .messaggio input{
-    width: 90%;
+    width: 80%;
     height: 50px;
     border-radius: 15px;
     margin-right: 15px;
     margin-left: 15px;
 }
+
+#col-destra main .container{
+    margin: 20px;
+}
+
+.box{
+    max-width: 50%;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#verde{
+    background-color: rgb(19, 233, 19);
+    margin-left: 50%;
+}
+
+#bianco{
+    background-color: white;
+}
+
+.box .date{
+    font-size: 13px;
+    text-align: end;
+    color: gray;
+}
+
+
+
+
+
+
+
+
 
 
 

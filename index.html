@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="container">
-                    <div id="contatti" v-for="items in contacts">
+                    <div id="contatti" v-for="(items,index) in contacts" @click="selezionaUtente(index)">
                         <img :src="items.avatar" alt="avatar">
                         <h3>{{items.name}}</h3>
                     </div>
@@ -54,9 +54,9 @@
         </div>
         <div id="col-destra">
             <header>
-                <img src="img/avatar_1.jpg" alt="avatar_1">
+                <img :src="contacts[indice].avatar" alt="avatar">
                 <div class="contatto">
-                    <h3>Michele</h3>
+                    <h3>{{contacts[indice].name}}</h3>
                     <p>Ultimo accesso oggi alle</p>
                 </div>
                 <div class="icons">
@@ -66,7 +66,22 @@
                 </div>
             </header>
             <main>
-
+                <div class="container">
+                    <div class="box" id="verde" v-for="message in contacts[indice].messages">
+                        <div >
+                            <p>{{message.text}}</p>
+                            <p class="date">{{message.date}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="box" id="bianco" v-for="message in contacts[indice].messages">
+                        <div >
+                            <p>ciao</p>
+                            <p class="date">ciao</p>
+                        </div>
+                    </div>
+                </div>
             </main>
             <div class="messaggio">
                 <i class="far fa-smile"></i>
