@@ -49,14 +49,38 @@ const app = new Vue(
                 ],
                 },
                 {
-                    name: 'Samuele',
-                    avatar: 'img/avatar_3.jpg',
-                    visible: true
+                name: 'Samuele',
+                avatar: 'img/avatar_3.jpg',
+                visible: true,
+                messages: [
+                {
+                date: '',
+                text: '',
+                status: 'sent'
                 },
                 {
-                    name: 'Luisa',
-                    avatar: 'img/avatar_4.jpg',
-                    visible: true
+                date: '',
+                text: '',
+                status: 'received'
+                },
+                ],
+                },
+                {
+                name: 'Luisa',
+                avatar: 'img/avatar_4.jpg',
+                visible: true,
+                messages: [
+                {
+                date: '',
+                text: '',
+                status: 'sent'
+                },
+                {
+                date: '',
+                text: '',
+                status: 'received'
+                },
+                ],
                 }
             ],
             indice : 0,

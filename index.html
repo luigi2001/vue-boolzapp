@@ -67,11 +67,11 @@
             </header>
             <main>
                 <div class="container" v-for="message in contacts[indice].messages">
-                    <div class="box" v-if="message.status == 'sent' " id="verde">
+                    <div class="box" v-if="message.status == 'sent' && message.text != '' && message.date != '' " id="verde">
                         <p>{{message.text}}</p>
                         <p class="date">{{message.date}}</p>
                     </div>
-                    <div class="box" v-if="message.status == 'received' " id="bianco">
+                    <div class="box" v-if="message.status == 'received' && message.text != '' && message.date != '' " id="bianco">
                         <p>{{message.text}}</p>
                         <p class="date">{{message.date}}</p>
                     </div>
