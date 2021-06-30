@@ -60,7 +60,7 @@ const app = new Vue(
                 }
             ],
             indice : 0,
-            messaggio: ''
+            messaggio: '',
         },
         methods: {
             selezionaUtente(indice){
@@ -69,10 +69,18 @@ const app = new Vue(
             data(){
                 return dayjs().format('DD/MM/YYYY') + ' ' + dayjs().format('HH:mm:ss');
             },
+            messaggioAuto(){
+                const ArrayMessage = this.contacts[this.indice].messages;
+                ArrayMessage.push({
+                    date: this.data(),
+                    text: 'ok',
+                    status: 'received'
+                });
+            },
             aggiuntaMessaggio(){
 
-                let messaggio = this.messaggio;
                 const ArrayMessage = this.contacts[this.indice].messages;
+                let messaggio = this.messaggio;
 
                 if(messaggio != ''){
                     ArrayMessage.push({
@@ -80,19 +88,12 @@ const app = new Vue(
                         text: messaggio,
                         status: 'sent'
                     });
+                    setTimeout(this.messaggioAuto, 1000);
                 }
 
                 this.messaggio = '';
-            },
-            messaggioAuto(){
-                this.ArrayMessage.push({
-                    date: this.data(),
-                    text: 'ok',
-                    status: 'received'
-                });
-            },
+            }
         }
-
     }
 );
 
