@@ -59,11 +59,37 @@ const app = new Vue(
                     visible: true
                 }
             ],
-            indice : 0
+            indice : 0,
+            messaggio: ''
         },
         methods: {
             selezionaUtente(indice){
                 this.indice = indice;
+            },
+            data(){
+                return dayjs().format('DD/MM/YYYY') + ' ' + dayjs().format('HH:mm:ss');
+            },
+            aggiuntaMessaggio(){
+
+                let messaggio = this.messaggio;
+                const ArrayMessage = this.contacts[this.indice].messages;
+
+                if(messaggio != ''){
+                    ArrayMessage.push({
+                        date: this.data(),
+                        text: messaggio,
+                        status: 'sent'
+                    });
+                }
+
+                this.messaggio = '';
+            },
+            messaggioAuto(){
+                this.ArrayMessage.push({
+                    date: this.data(),
+                    text: 'ok',
+                    status: 'received'
+                });
             },
         }
 
