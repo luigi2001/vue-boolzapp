@@ -85,6 +85,7 @@ const app = new Vue(
             ],
             indice : 0,
             messaggio: '',
+            input: ''
         },
         methods: {
             selezionaUtente(indice){
@@ -116,6 +117,13 @@ const app = new Vue(
                 }
 
                 this.messaggio = '';
+            }
+        },
+        computed:{
+            cerca(){
+                return this.contacts.filter(element => {
+                    return element.name.toLowerCase().includes(this.input.toLowerCase());
+                });
             }
         }
     }

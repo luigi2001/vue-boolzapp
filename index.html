@@ -41,11 +41,11 @@
                 <div id="container-cerca">
                     <div id="cerca">
                         <i class="fas fa-search"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="input">
                     </div>
                 </div>
                 <div class="container">
-                    <div id="contatti" v-for="(items,index) in contacts" @click="selezionaUtente(index)">
+                    <div id="contatti" v-for="(items,index) in cerca" @click="selezionaUtente(index)">
                         <img :src="items.avatar" alt="avatar">
                         <h3>{{items.name}}</h3>
                     </div>
